@@ -1,0 +1,253 @@
+@font-face {
+  font-family: Zara-Oblique;
+  src: url(fonts/Zara-Oblique.woff);
+}
+
+@font-face {
+  font-family: Zara-Regular;
+  src: url(fonts/Zara-Regular.woff);
+}
+
+@font-face {
+  font-family: TribaliumNeue-Regular;
+  src: url(fonts/TribaliumNeue-Regular.woff);
+}
+
+* {
+  box-sizing: border-box;
+  font-size: 1em;
+}
+
+body {
+  font-family: Helvetica, Zara-Regular;
+  width: 100%;
+  margin: auto;
+}
+
+.wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+/* navitation bar */
+
+.title {
+  font-size: 1.6em;
+}
+
+#navigation {
+  top: 0;
+  padding: 10px 10px 0px 10px;
+  font-family: Zara-Regular;
+  background-color: white;
+  flex: 1 0 20%;
+}
+
+#navigation input[type="radio"] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+
+#navigation label {
+  display: inline-block;
+  background-color: rgba(221, 221, 221, 0.6);
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 1px solid yellowgreen;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+#navigation input[type="radio"]:checked + label {
+  background-color: #3f5efb;
+}
+
+#navigation input[type="radio"]:focus + label {
+  background-color: #3f5efb;
+}
+
+#navigation input[type="radio"]:hover + label {
+  box-shadow: inset 0px 0px 36px -7px rgba(63, 94, 251, 0.84);
+}
+
+/* mainpage */
+
+/* scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(221, 221, 221, 0.6);
+  border: 1px solid yellowgreen;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  box-shadow: inset 0px 0px 36px -7px rgba(63, 94, 251, 0.84);
+}
+
+/* archive */
+
+#containerArchive {
+  width: 100%;
+  height: 80vh;
+  margin: auto;
+  overflow: auto;
+  background: rgb(63, 94, 251);
+  background: radial-gradient(
+    circle,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(255, 255, 255, 1) 71%
+  );
+}
+
+.elementDiv {
+  filter: blur(14px);
+  height: auto;
+  max-height: 30vh;
+  margin: 20px auto;
+  padding: 0;
+  background-color: rgb(241, 241, 241, 0.6);
+  font-size: 16px;
+  border: 1px solid yellowgreen;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.show {
+  display: block;
+  filter: none;
+}
+
+.show:hover {
+}
+
+.workTitle {
+  font-family: Zara-Regular;
+  font-size: 1.2em;
+  text-align: center;
+  margin: 5px 0;
+  display: none;
+}
+
+.subtitle {
+  display: none;
+}
+
+.savedAs {
+  margin: 0;
+  padding: 0;
+}
+
+.savedAs span {
+  color: grey;
+}
+
+.workContainer {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+/* images */
+
+.workImage {
+  width: 100%;
+  position: relative;
+}
+
+.mySlides {
+  width: 100%;
+  display: none;
+  margin: auto;
+}
+
+.mySlides > img {
+  width: 100%;
+  display: block;
+  margin: auto;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  color: rgb(241, 241, 241, 0.6);
+  text-shadow: 0px 0px 17px #3f5efb;
+}
+
+.workDescription {
+  display: none;
+  padding: 20px;
+  width: 60%;
+}
+
+@media only screen and (min-width: 600px) {
+  .wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #navigation {
+    font-size: 1.2em;
+    flex: 0 1 30%;
+    position: relative;
+    margin: 20px;
+    align-self: start;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+  }
+
+  #containerArchive {
+    flex: 1 1 60%;
+    margin: 0 1px;
+    height: 100vh;
+  }
+
+  .elementDiv {
+    width: 40%;
+    transition: width 1.5s, height 1.5s;
+  }
+
+  .show:hover {
+    width: 80%;
+    height: auto;
+    max-height: 90vh;
+    overflow: auto;
+  }
+}
