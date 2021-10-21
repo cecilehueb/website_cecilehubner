@@ -110,11 +110,6 @@ a:active {
   width: 12px;
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-  /* background: #f1f1f1; */
-}
-
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: rgba(221, 221, 221, 0.6);
@@ -163,8 +158,8 @@ a:active {
   transition: width 1.5s, height 1.5s, max-width 1.5s, max-height 2s;
 }
 
-.show:hover {
-}
+/* .show:hover {
+} */
 
 .grow {
   width: 80%;
