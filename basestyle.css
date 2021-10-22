@@ -82,7 +82,7 @@ a:active {
   display: inline-block;
   background-color: rgba(221, 221, 221, 0.6);
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: 0.8em;
   border: 1px solid yellowgreen;
   border-radius: 4px;
   margin-bottom: 8px;
@@ -148,7 +148,8 @@ a:active {
   font-size: 16px;
   /* border: 1px solid yellowgreen; */
   /* border-radius: 4px; */
-  overflow: hidden;
+  overflow: auto;
+  width: 80%;
 }
 
 .show {
@@ -162,7 +163,7 @@ a:active {
 } */
 
 .grow {
-  width: 80%;
+  width: 100%;
 }
 
 .workTitle {
@@ -275,6 +276,14 @@ a:active {
     align-items: flex-start;
   }
 
+  #navigation label {
+    font-size: 1em;
+  }
+
+  #navigation label:last-child {
+    margin-top: 1.5em;
+  }
+
   #containerArchive {
     flex: 1 1 80%;
     margin: 0 1px;
@@ -284,6 +293,7 @@ a:active {
   .elementDiv {
     width: 40%;
     transition: width 1.5s, height 1.5s, max-width 1.5s, max-height 2s;
+    overflow: hidden;
   }
 
   .show:hover {
