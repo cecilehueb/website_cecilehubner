@@ -112,7 +112,7 @@ a:active {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgba(221, 221, 221, 0.6);
+  background: rgba(63, 94, 251, 0.2);
   border-radius: 4px;
   margin-bottom: 8px;
   margin: 2px;
@@ -136,11 +136,11 @@ a:active {
     rgba(63, 94, 251, 0.5) 0%,
     rgba(255, 255, 255, 0.5) 71%
   );
+  padding-left: 12px;
 }
 
 .elementDiv {
   filter: blur(10px);
-  height: auto;
   max-height: 10vh;
   margin: 20px auto;
   padding: 0;
@@ -155,8 +155,9 @@ a:active {
 .show {
   display: block;
   filter: none;
-  max-height: 60vh;
-  transition: width 1.5s, height 1.5s, max-width 1.5s, max-height 2s;
+  height: auto;
+  max-height: 200vh;
+  transition: width 1.5s, height 1.5s, max-width 1.5s, max-height 4s;
 }
 
 /* .show:hover {

@@ -51,6 +51,7 @@ let elementDiv = document.getElementsByClassName("elementDiv");
 let currentSelection = [];
 
 checkboxes.addEventListener('change', function (e) {
+
     for (let i = 0; i < allCheckboxes.length; i++) {
         removeClass(allCheckboxes[i].id, "show");
     };
@@ -71,7 +72,10 @@ checkboxes.addEventListener('change', function (e) {
         }
     }
     console.log(currentSelection);
-});
+    removeDescription();
+
+    
+},);
 
 function addClass(targetId, className) {
     for (let i = 0; i < elementDiv.length; i++) {
@@ -123,7 +127,7 @@ containerArch.addEventListener("click", function(event) {
 
 let aboutButtonAll = document.querySelectorAll(".fold_about");
 
-for (let i =0; i<aboutButtonAll.length; i++){
+for (let i =0; i<aboutButtonAll.length; i++) {
     aboutButtonAll[i].addEventListener("click", function() {
         this.classList.toggle("active");
         var content = this.nextElementSibling;
@@ -133,6 +137,19 @@ for (let i =0; i<aboutButtonAll.length; i++){
           content.style.display = "block";
         }
       });
+}
+
+
+
+
+function removeDescription() {
+    for (let i =0; i<aboutButtonAll.length; i++) {
+            aboutButtonAll[i].classList.toggle("active");
+            var content = aboutButtonAll[i].nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } 
+          };
 }
 
 
