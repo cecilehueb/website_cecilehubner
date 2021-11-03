@@ -18,6 +18,11 @@
   src: url(fonts/MunkenSans-Regular.otf);
 }
 
+@font-face {
+  font-family: MunkenSans-Medium;
+  src: url(fonts/MunkenSans-Medium.otf);
+}
+
 * {
   box-sizing: border-box;
   font-size: 1em;
@@ -255,7 +260,20 @@ a:active {
 .workDescription {
   display: none;
   padding: 10px;
-  background-color: rgba(63, 94, 251, 0.3);
+  /* background-color: rgba(63, 94, 251, 0.3); */
+}
+
+.artiststatement p:first-child {
+  font-family: MunkenSans-Medium;
+}
+
+.currently {
+  padding: 10px 20px;
+  transform: skew(-25deg);
+}
+
+.reference {
+  margin-top: 20px;
 }
 
 @media only screen and (min-width: 600px) {
@@ -298,7 +316,7 @@ a:active {
   }
 
   .show:hover {
-    box-shadow: 0px 0px 36px -7px rgba(63, 94, 251, 0.84);
+    box-shadow: 0px 0px 36px -7px rgba(63, 94, 251, 0.4);
   }
 
   .grow {
@@ -306,5 +324,9 @@ a:active {
     height: auto;
     max-height: inherit;
     /* overflow: auto; */
+  }
+
+  .artiststatement {
+    padding: 10px 100px;
   }
 }
